@@ -3,6 +3,7 @@ import './Preloader.css'; // Import CSS file
 
 const Preloader = () => {
   const [text, setText] = useState('');
+  const [blinking, setBlinking] = useState(false);
   const word = 'ISHIMWE';
 
   useEffect(() => {
@@ -14,15 +15,21 @@ const Preloader = () => {
         index++;
       } else {
         clearInterval(interval);
+        setTimeout(() => {
+          setBlinking(true); // Activate blinking after loading
+          setTimeout(() => {
+            setBlinking(false); // Deactivate blinking after two blinks
+          }, 1000);
+        }, 1000); // Adjust the delay before blinking starts
       }
-    }, 300); // Adjust the interval duration (in milliseconds) to control the typing speed
+    }, 400); // Adjust the interval duration (in milliseconds) to control the typing speed
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="preloader-container">
-      <div className="preloader-animation">
+      <div className={`preloader-animation ${blinking ? 'blinking' : ''}`}>
         {text}
       </div>
     </div>
