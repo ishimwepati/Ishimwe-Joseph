@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Preloader from './components/Preloader';
+import home from './components/home';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -8,7 +9,7 @@ const App = () => {
     // Simulate some async operation (e.g., fetching data)
     setTimeout(() => {
       setLoading(false); // Set loading to false after some time
-    },4000); // Simulating a 2-second delay
+    },2000); // Simulating a 2-second delay
   }, []);
 
   return (
