@@ -6,8 +6,8 @@
   }
   
   .preloader-animation {
-    font-size: 24px;
+    font-size: 240px;
     font-weight: bold;
-    color: #333;
+    color: #333; /* You can adjust the color */
   }
   

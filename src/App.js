@@ -8,7 +8,7 @@ const App = () => {
     // Simulate some async operation (e.g., fetching data)
     setTimeout(() => {
       setLoading(false); // Set loading to false after some time
-    }, 2000); // Simulating a 2-second delay
+    },3000); // Simulating a 2-second delay
   }, []);
 
   return (
@@ -18,6 +18,7 @@ const App = () => {
       ) : (
         // Render your app content here once loading is complete
         <div className="app-content">
+          Welcome home
           {/* Your app content goes here */}
         </div>
       )}
