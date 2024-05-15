@@ -5,29 +5,16 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
+    background-color: rgb(15, 6, 6);
+}
   
-  .preloader-animation {
+.preloader-animation {
     font-size: 240px;
-    font-weight: bold;
-    color: #333; /* You can adjust the color */                                                                  font-family: 'Exo Space', sans-serif;
-    font-family: 'Exo Space', sans-serif;
-    font-weight: 900 !important;
-        /* Add any additional styles as needed */
-    }
-      
-    @keyframes blink {
-        0% { opacity: 1; }
-        50% { opacity: 0; }
-        100% { opacity: 1; }
-      }
-      
-      .preloader-animation {
-        animation: blink 1s infinite; /* Apply blinking animation */
-      }
-      
-      .blinking {
-        animation: blink 1s 2; /* Only blink twice */
-      }
-      
+    font-weight: 900;
+    color: #f5f0f0; /* Adjust the color */
+    font-family: 'Exo Space', sans-serif; /* Apply the Exo Space font with fallback to sans-serif */
+}
   
+.fill-animation {
+    transition: fill 1s;
+}

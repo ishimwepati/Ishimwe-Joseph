@@ -8,7 +8,7 @@ const App = () => {
     // Simulate some async operation (e.g., fetching data)
     setTimeout(() => {
       setLoading(false); // Set loading to false after some time
-    },4000); // Simulating a 2-second delay
+    },6000); // Simulating a 2-second delay
   }, []);
 
   return (
