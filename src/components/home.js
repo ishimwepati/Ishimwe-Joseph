@@ -6,7 +6,10 @@ const AnotherPage = () => {
       <h1>Weoclem</h1>
       <p>You can add any content here for your another page.</p>
       <p>New Page</p>
-    </div>
+      <div>
+        <h2>Hello Welcome to Our New Page</h2>
+      </div>
+     </div>
   );
 };
 
