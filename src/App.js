@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Preloader from './components/Preloader';
+import AnotherPage from './components/home';
 
-function App() {
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate some async operation (e.g., fetching data)
+    setTimeout(() => {
+      setLoading(false); // Set loading to false after some time
+    }, 4000); // Simulating a 2-second delay
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {loading ? (
+        <Preloader />
+      ) : (
+        // Render your app content here once loading is complete
+        <div className="app-content">
+          {/* Your app content goes here */}
+          <AnotherPage />
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default App;

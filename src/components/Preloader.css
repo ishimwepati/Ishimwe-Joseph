@@ -1,0 +1,16 @@
+@import url('https://fonts.cdnfonts.com/css/exo-space');
+
+.preloader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  .preloader-animation {
+    font-size: 240px;
+    font-weight: 900;
+    color: #fcfafa; /* Adjust the color */
+    font-family: 'Exo Space', sans-serif; /* Apply the Exo Space font */
+  }
